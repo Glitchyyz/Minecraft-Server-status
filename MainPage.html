@@ -8,15 +8,25 @@
     <link rel="stylesheet" href="StyleSheet.css">
     <title></title>
 </head>
-<body>
-   <div class = "Magic-Box" style="height: 80px;width: 100px; right: 10%;top: 50px; border-radius: 20%;"onclick="ApiCall()"> Refresh  </div>
-   <h1 class = "pixelify-sans"style="top:0px; left : 30px;"" >Simon's website</h1>
+<body  style="background-color:rgb(147, 225, 216)";>
+
+    <div class="Topbar">
+        
+    </div>
+   <div class = "Magic-Box" style="height: 50px;width: 100px; right: 10px;top: 160px; border-radius: 10%;"onclick="ApiCall()"> Refresh  </div>
+   <h1 class = "pixelify-sans"style=" text-align: center;  color: rgb(35, 2, 46);" >Minecraft Server Status checker</h1>
    <br />
-   <input type="text" id="ServerInput" name="fname">
-   <div  class="minecraftServerList">
+   <p style="top: 60px; font-family: Pixelify Sans, serif;">enter the server address below , then press the refresh button </p>
+   <br />
+   <input type="text" id="ServerInput" name="fname"class="inputfield">
+   <div  class="minecraftServerList" onclick="copyip()" >
     <img id = "Image"  alt="">
-    <h2 id = "ServerStuff"></h2>
+    <h1 id = "checkmark" class = "onlinetext"></h1>
+    <h3 id = "motd"></h3>
+    <h2 id = "ServerStuff" style="font-size: 20px;font-family:Pixelify Sans">please enter ip</h2>
+
    </div>
+   <p style="bottom: 20px; position:absolute; font-family: Pixelify Sans, serif;"> if you click on the server you can copy its address</p>
    <script src="Apimanager.js"></script>
 </body>
 </html>
