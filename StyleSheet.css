@@ -1,0 +1,76 @@
+.Magic-Box{ /*used for the glowy buttons*/
+    cursor: pointer;
+    width: 200px;
+    height: 150px;
+    background-color: rgb(51, 46, 46);
+    border-radius: 15%;
+    right: auto;
+    bottom: auto;
+    
+    left: auto;
+    position: absolute;
+    user-select: none;
+    outline-width: 3px;
+    outline-style: solid;
+    outline-color: #ff00ea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Pixelify Sans", serif;
+    font-size: large;
+    color: #fff;
+    transition: box-shadow 0.3s ease,text-shadow 0.2s ease,scale 0.2s ease;
+    scale: 1;
+
+    
+}
+.Magic-Box:hover{
+    box-shadow: 0 0 20px 5px #ff00ea;
+    text-shadow: 0 0 20px #ff00ea, 0 0 30px #ff00ea, 0 0 40px #ff00ea;
+    
+}
+.Magic-Box:active{
+    box-shadow: 0 0 35px 10px #00d9ff;
+    scale: 0.95;
+    outline-color: #00d9ff;
+    text-shadow: 0 0 20px #00d9ff, 0 0 30px #00d9ff, 0 0 40px #00d9ff;
+}
+.glow {
+    overflow-y: inherit(".Magic-Box");
+    overflow-x: inherit("Magic-Box");
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background:#00ffc343  ;
+    box-shadow: 0 0 150px 50px #00ffc3;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease, opacity 0.1s ease;
+    
+}
+.glowBlue {
+    overflow-y: inherit(".Magic-Box");
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background:#00d9ff43  ;
+    box-shadow: 0 0 50px 15px #00d9ff;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease, opacity 0.1s ease;
+
+}
+
+.minecraftServerList
+{
+    position: absolute;
+    top: 20%;
+    left: 5%;
+}
+
+.pixelify-sans {
+    font-family: "Pixelify Sans", serif;
+    font-optical-sizing: auto;
+  }
