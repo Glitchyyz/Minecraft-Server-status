@@ -8,17 +8,19 @@
     <link rel="stylesheet" href="StyleSheet.css">
     <title></title>
 </head>
-<body  style="background-color:rgb(147, 225, 216)";>
+<body  style="background-color:rgb(147, 225, 216)" id = "main">
+    <div class = "PageButton">Next Page</div>
 
     <div class="Topbar">
         
     </div>
-   <div class = "Magic-Box" style="height: 50px;width: 100px; right: 10px;top: 160px; border-radius: 10%;"onclick="ApiCall()"> Refresh  </div>
+   <div class = "PageButton" style="height: 50px;width: 100px; right: 10px;top: 160px; border-radius: 10%;"onclick="ApiCall()"> Refresh  </div>
    <h1 class = "pixelify-sans"style=" text-align: center;  color: rgb(35, 2, 46);" >Minecraft Server Status checker</h1>
    <br />
    <p style="top: 60px; font-family: Pixelify Sans, serif;">enter the server address below , then press the refresh button </p>
    <br />
    <input type="text" id="ServerInput" name="fname"class="inputfield">
+   <div id = "ServerList" style="position: relative;"></div>
    <div  class="minecraftServerList" onclick="copyip()" >
     <img id = "Image"  alt="">
     <h1 id = "checkmark" class = "onlinetext"></h1>
