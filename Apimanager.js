@@ -17,11 +17,19 @@ function ApiCall() {
             console.log(data); 
             if(data.server.name != null)
             {
+                const moves = document.querySelectorAll('.minecraftServerList');
+                const totalElements = moves.length;
+                moves.forEach((div )=> {
+                    const id = parseInt(div.id);
+                     const invertedOffset = 250 * (totalElements - 1 - id) + 20;
+                        div.style.top = `${invertedOffset}px`;
+                        });
+
                 var div = document.createElement("div");
                 div.classList.add("minecraftServerList");
                 div.id = idnumberer;
                 div.style.position = "absolute"
-                div.style.top = "0px";
+                div.style.top = "20px";
                 document.getElementById("ServerList").appendChild(div);
                 var image = document.createElement("img");
                 image.src = data.favicon
@@ -45,15 +53,7 @@ function ApiCall() {
                 h2.innerText =  data.server.name+ "\n" + data.players.now + "/" + data.players.max  ;
                 document.getElementById(idnumberer).appendChild(h2);
                 idnumberer++;
-                   const moves = document.querySelectorAll('.minecraftServerList')
-                moves.forEach((div,index) => 
-                {
-
-                    const uniqueOffset = 250 * (index ) + 20;
-
-                    div.style.top = `${uniqueOffset}px`;
-                }
-                )
+                 
             
             
             }else
