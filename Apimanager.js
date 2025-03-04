@@ -1,4 +1,9 @@
-var Number , idnumberer = 0;
+var Number , idnumberer = -1;
+var List = {
+    Server:
+    {
+    }
+}
 function ApiCall() {
 
     const serverIp = document.getElementById("ServerInput").value; // gets ip from user
@@ -16,6 +21,13 @@ function ApiCall() {
             console.log(data); 
             if(data.server.name != null)
             {
+                localStorage.removeItem("deeznutz6969");
+                
+                List.Server[idnumberer + 1] = serverIp;
+                localStorage.setItem("deeznutz6969",JSON.stringify( List))
+                
+                console.log(localStorage.getItem("deeznutz6969"));
+
                 const moves = document.querySelectorAll('.minecraftServerList');
                 const totalElements = moves.length;
                 moves.forEach((div )=> {
@@ -23,7 +35,7 @@ function ApiCall() {
                      const invertedOffset = 250 * (totalElements - 1 - id) + 20;
                         div.style.top = `${invertedOffset}px`;
                         });
-
+                
                 var div = document.createElement("div");
                 div.classList.add("minecraftServerList");
                 div.id = idnumberer;
@@ -51,6 +63,7 @@ function ApiCall() {
                 h2.style = "font-size: 20px;font-family:Pixelify Sans";
                 h2.innerText =  data.server.name+ "\n" + data.players.now + "/" + data.players.max  ;
                 document.getElementById(idnumberer).appendChild(h2);
+                
                 idnumberer++;
                  
             
@@ -72,4 +85,15 @@ function copyip(){
     navigator.clipboard.writeText(copyText);
 
 }
-    
+function Clear(){
+    idnumberer = -1;
+    List = {
+        Server:
+        {
+        }
+    }
+    const moves = document.querySelectorAll('.minecraftServerList');
+                moves.forEach((div )=> {
+                    div.remove();
+                        });
+}   
