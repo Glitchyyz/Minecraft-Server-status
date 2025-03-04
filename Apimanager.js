@@ -3,7 +3,6 @@ function ApiCall() {
 
     const serverIp = document.getElementById("ServerInput").value; // gets ip from user
     const apiUrl = `https://mcapi.us/server/status?ip=${serverIp}`;
-    const imageUrl = `https://mcapi.us/server/image?ip=${serverIp}`;
 
     
         fetch(apiUrl)
