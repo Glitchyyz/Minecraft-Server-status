@@ -3,16 +3,16 @@
     
     user-select: none;
     background-color: rgb(255, 255, 255) ;
+    box-shadow: 2px 2px rgb(151, 151, 151);
     border-radius: 20px;
     position: relative;
     top: 20px;
     left: 30px;
-    height: 220px;
+    height: 210px;
+    display: inline-block;
     width: fit-content;
-    outline-offset: -1px;
-    outline-width: 7px;
-    outline-style: solid;
-    outline-color: rgb(255, 255, 255);
+    padding: 10px;
+    
     transition: scale 0.2s ease, top 0.3s ease ;
     scale: 1;
 }
@@ -59,18 +59,16 @@
     font-family:"Pixelify Sans", serif;
     font-size: 20px;
     bottom :auto;
-    left: 265px;
+    left: 390px;
     position: absolute;
-    outline-color:#107033;
-    outline-width: 10px;
-    outline-style: solid;
-    outline-offset: -1px;
+    display: inline-block;
     width: fit-content;
+    padding: 10px;
     height: fit-content;
     background-color: #107033;
     font-weight: 700;
     color:#ffffff;
-    border-radius: 5px;
+    border-radius: 15px;
     user-select: none;
     cursor: pointer;
     display: flex;
@@ -90,11 +88,20 @@
 {
     scale: 0.95;
 }
+.toggle
+{
+    height: 20px;
+    width: 20px;
+    accent-color: #0F3B1F;
+    
+    
+}
+
 .greenDot
 {
     height: 15px;
     width: 15px;
-    background-color: #168C42;
+    background-color: #15be53;
     border-radius: 100%;
     position: absolute;
     top: 20px;
