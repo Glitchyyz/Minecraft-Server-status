@@ -107,3 +107,17 @@
     top: 20px;
     right: 20px;
 }
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #15be53; /* Blue */
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    translate: 200px 40px;
+    animation: spin 1s ease infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
