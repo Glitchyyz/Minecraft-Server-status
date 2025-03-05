@@ -2,18 +2,17 @@
 {
     
     user-select: none;
-    background-color: rgb(170, 68, 101) ;
-    border-radius: 5%;
+    background-color: rgb(255, 255, 255) ;
+    border-radius: 20px;
     position: relative;
     top: 20px;
     left: 30px;
-    height: fit-content ;
+    height: 220px;
     width: fit-content;
     outline-offset: -1px;
     outline-width: 7px;
     outline-style: solid;
-    outline-color: rgb(170, 68, 101);
-    
+    outline-color: rgb(255, 255, 255);
     transition: scale 0.2s ease, top 0.3s ease ;
     scale: 1;
 }
@@ -32,18 +31,20 @@
     right: 0px;
     z-index: -100;
     width: 100%;
-    height:150px;
-    background-color: rgb(255, 166, 158);
+    height:200px;
+    background-color: #168C42;
 }
 .inputfield
 {
-    background-color: rgb(134, 22, 87);
+    background-color: rgb(255, 255, 255);
     border-radius: 15px;
-    height: 30px;
-    font-size: 20px;
-    color: rgb(147, 225, 216);
+    height: 35px;
+    font-size: 18px;
+    color: rgb(62, 62, 62);
     font-family:"Pixelify Sans", serif;
     outline: none;
+    outline-width: 0px;
+    border: none;
     
 }
 .onlinetext{
@@ -58,16 +59,17 @@
     font-family:"Pixelify Sans", serif;
     font-size: 20px;
     bottom :auto;
-    right: 20px;
+    left: 265px;
     position: absolute;
-    outline-color:rgb(134, 22, 87) ;
+    outline-color:#107033;
     outline-width: 10px;
     outline-style: solid;
     outline-offset: -1px;
     width: fit-content;
     height: fit-content;
-    background-color: rgb(134, 22, 87);
-    color:rgb(147, 225, 216);
+    background-color: #107033;
+    font-weight: 700;
+    color:#ffffff;
     border-radius: 5px;
     user-select: none;
     cursor: pointer;
@@ -75,16 +77,26 @@
     align-items: center;
     justify-content: center;
     scale: 1;
-    transition: scale 0.2s ease, background-colour 0.2s ease;
+    transition: scale 0.1s ease, background-colour 0.1s ease;
 }
 .PageButton:hover
 {
     scale: 1.07;
-    background-color: rgb(104, 19, 69);
-    outline-color:rgb(104, 19, 69) ;
+    background-color: #0F3B1F;
+    outline-color:#0F3B1F ;
     box-shadow: 2;
 }
 .PageButton:active
 {
     scale: 0.95;
+}
+.greenDot
+{
+    height: 15px;
+    width: 15px;
+    background-color: #168C42;
+    border-radius: 100%;
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }

@@ -44,11 +44,12 @@ function ApiCall() {
                 document.getElementById("ServerList").appendChild(div);
                 var image = document.createElement("img");
                 image.src = data.favicon
+                image.style.borderRadius ="15px";
                 document.getElementById(idnumberer).appendChild(image);
-                var h1 = document.createElement("h1");
-                h1.classList.add("onlinetext");
-                h1.innerText = "online";
-                document.getElementById(idnumberer).appendChild(h1);
+                var div1 = document.createElement("div");
+                div1.classList.add("greenDot");
+                document.getElementById(idnumberer).appendChild(div1);
+                
                 var h3 = document.createElement("h3");
                 if(!Array.isArray(data.motd_json.extra))
                     {
@@ -60,8 +61,8 @@ function ApiCall() {
                     }
                     document.getElementById(idnumberer).appendChild(h3);
                 var h2 = document.createElement("h2");
-                h2.style = "font-size: 20px;font-family:Pixelify Sans";
-                h2.innerText =  data.server.name+ "\n" + data.players.now + "/" + data.players.max  ;
+                h2.style = "font-size: 15px;font-family:Arial, Helvetica, sans-serif; text-align: center;" ;
+                h2.innerText =  data.server.name+ "\n Players: " + data.players.now + "/" + data.players.max+"\n"+serverIp  ;
                 document.getElementById(idnumberer).appendChild(h2);
                 
                 idnumberer++;
