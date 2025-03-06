@@ -12,13 +12,26 @@
     display: inline-block;
     width: fit-content;
     padding: 10px;
-    
+    -webkit-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
     transition: scale 0.2s ease, top 0.3s ease ;
     scale: 1;
+    cursor: pointer;
+    
+
 }
 .minecraftServerList:hover
 {
     scale: 1.1;
+}
+.minecraftServerList:active
+{
+    background-color: #168C42;
+    -webkit-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
+    scale: 0.98;
+
 }
 
 .pixelify-sans {

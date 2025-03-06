@@ -45,7 +45,7 @@ function ApiCall() {
             return response.json(); 
         })
         .then(data => {
-            console.log(data); 
+            
            
             if(data.online === true)
             {
@@ -55,7 +55,6 @@ function ApiCall() {
                 List.Server[idnumberer + 1] = serverIp;
                 localStorage.setItem("deeznutz6969",JSON.stringify( List));
                 
-                console.log(localStorage.getItem("deeznutz6969"));
 
                 const moves = document.querySelectorAll('.minecraftServerList');
                 const totalElements = moves.length;
@@ -68,6 +67,10 @@ function ApiCall() {
                 var div = document.createElement("div");
                 div.classList.add("minecraftServerList");
                 div.id = idnumberer;
+                div.onclick =function() {
+                    copyip(div.id );
+                };
+                
                 div.style.position = "absolute"
                 div.style.top = "20px";
                 document.getElementById("ServerList").appendChild(div);
@@ -106,11 +109,11 @@ function ApiCall() {
     }
 
 
-function copyip(){
-    const copyText = document.getElementById("ServerInput").value;
-    navigator.clipboard.writeText(copyText);
-
-}
+    function copyip(clicked) {
+        parseInt(clicked) +1;
+        navigator.clipboard.writeText(List.Server[parseInt(clicked) +1])
+        
+    }
 function Clear(){
     idnumberer = -1;
     List = {
